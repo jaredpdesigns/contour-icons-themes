@@ -1,0 +1,16 @@
+<section class="icon__holder">
+  {% for icon in site.data.icons %}
+  {% if icon.title contains include.category %}
+  <section class="icon__item">
+    <figure {% if icon.oversized == true %} class="wide"{% endif %}>
+      <svg role="icon" height="16" width="16">
+        <use xlink:href="#{{ icon.title }}"/>
+      </svg>
+    </figure>
+    <figcaption>
+      <p>{{ icon.title }}</p>
+    </figcaption>
+  </section>
+  {% endif %}
+  {% endfor %}
+</section>

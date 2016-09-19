@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+</head>
+<body>
+{% include sprite.html %}
+<nav role="header-nav">
+  <section class="wrapper">
+    <a {% if page.url == '/' %}class="active"{% endif %}href="{{ site.baseurl }}/"><svg height="16" width="16"><use xlink:href="#default-menu-main"/></svg>Icons</a>
+    <a {% if page.url contains 'themes' %}class="active"{% endif %}href="{{ site.baseurl }}/themes"><svg height="16" width="16"><use xlink:href="#default-menu-action"/></svg>Themes</a>
+  </section>
+</nav>
+<main>
+  <article class="base wrapper">
+    {{ content }}
+  </article>
+</main>
+</body>
+</html>

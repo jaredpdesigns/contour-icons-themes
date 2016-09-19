@@ -1,0 +1,29 @@
+title: Contour Icons & Themes
+baseurl: "/contour-icons-themes"
+url: "http://jaredpdesigns.github.io/contour-icons-themes"
+source: src
+destination: docs
+markdown: kramdown
+sass:
+  sass_dir: _partials
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+highlighter: none
+
+gems:
+  - jekyll-autoprefixer
+  
+autoprefixer:
+  browsers:
+  - last 2 versions
+  
+page_gen:
+  - data: 'icons'
+    template: 'icons'
+    name: 'title'
+    dir: 'svgs'
+    extension: 'svg'

@@ -1,0 +1,7 @@
+<svg style="display: none;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>{% for icon in site.data.icons %}
+        <symbol id="{{ icon.title }}" viewBox="0 0 {% if icon.viewbox-width %}{{ icon.viewbox-width}}{% else %}32{% endif %} 32" {%if icon.oversized == true %}preserveAspectRatio="xMinYMin slice"{% endif %}>
+            <path fill="currentColor" fill-rule="evenodd" d="{{ icon.path }}"/>{% if icon.path-alt %}<path fill="currentColor" opacity="0.25" class="icon__bg" fill-rule="evenodd" d="{{ icon.path-alt }}"/>{% endif %}<rect fill="none" x="0" y="0" width="{% if icon.viewbox-width %}{{ icon.viewbox-width}}{% else %}32{% endif %}" height="32"></rect>
+        </symbol>{% endfor %}
+    </defs>
+</svg>
