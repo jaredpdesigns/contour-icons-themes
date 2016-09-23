@@ -22,7 +22,8 @@ $color-green: #26c281;
 $color-orange: #f27935;
 $color-red: #ff4500;
 
-@function tint($color, $percent) { @return mix(#fff, $color, $percent); }
+@function tint($color, $percent)  { @return mix(#fff, $color, $percent); }
+@function shade($color, $percent) { @return mix(#000, $color, $percent); }
 
 $color-base-75: tint($color-base,25%);
 $color-base-62: tint($color-base,38%);
@@ -39,6 +40,7 @@ $color-highlight-38: tint($color-highlight,62%);
 $color-highlight-25: tint($color-highlight,75%);
 $color-highlight-12: tint($color-highlight,88%);
 $color-highlight-5:  tint($color-highlight,95%);
+$color-highlight-dark: shade($color-highlight,38%);
 
 // Earth
 $color-base-earth: #331A10;
@@ -59,6 +61,7 @@ $color-highlight-earth-38: tint($color-highlight-earth,62%);
 $color-highlight-earth-25: tint($color-highlight-earth,75%);
 $color-highlight-earth-12: tint($color-highlight-earth,88%);
 $color-highlight-earth-5:  tint($color-highlight-earth,95%);
+$color-highlight-earth-dark: shade($color-highlight-earth,38%);
 
 // Forest
 $color-base-forest: #172617;
@@ -79,6 +82,7 @@ $color-highlight-forest-38: tint($color-highlight-forest,62%);
 $color-highlight-forest-25: tint($color-highlight-forest,75%);
 $color-highlight-forest-12: tint($color-highlight-forest,88%);
 $color-highlight-forest-5:  tint($color-highlight-forest,95%);
+$color-highlight-forest-dark: shade($color-highlight-forest,38%);
 
 // Lava
 $color-base-lava: #331316;
@@ -99,6 +103,7 @@ $color-highlight-lava-38: tint($color-highlight-lava,62%);
 $color-highlight-lava-25: tint($color-highlight-lava,75%);
 $color-highlight-lava-12: tint($color-highlight-lava,88%);
 $color-highlight-lava-5:  tint($color-highlight-lava,95%);
+$color-highlight-lava-dark: shade($color-highlight-lava,38%);
 
 // Sea
 $color-base-sea: #061D33;
@@ -119,6 +124,7 @@ $color-highlight-sea-38: tint($color-highlight-sea,62%);
 $color-highlight-sea-25: tint($color-highlight-sea,75%);
 $color-highlight-sea-12: tint($color-highlight-sea,88%);
 $color-highlight-sea-5:  tint($color-highlight-sea,95%);
+$color-highlight-sea-dark: shade($color-highlight-sea,38%);
 
 $space-xs: 0.375rem;
 $space-s:  0.75rem;
